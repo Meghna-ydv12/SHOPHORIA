@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Shophoria – Pastel Shopping</title>
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="stylesheet" href="shophoria.css">
+</head>
+<body>
+  <!-- Splash Animation -->
+  <div id="splash" class="splash-overlay">
+    <div class="splash-center">
+      <img src="logo2.png" alt="Shophoria Logo" class="splash-logo" />
+      <div class="splash-brand" id="splash-brand">Shophoria</div>
+    </div>
+  </div>
+
+  <!-- AUTH MODAL -->
+  <div id="auth-modal" class="auth-modal">
+    <div class="auth-modal-content">
+      <span class="close" id="close-auth-modal">&times;</span>
+      <img src="logo2.png" alt="Logo" class="auth-logo"/>
+      <div class="auth-title">Welcome to Shophoria</div>
+      <div class="auth-tabs">
+        <button id="tab-login" class="auth-tab active">Log In</button>
+        <button id="tab-signup" class="auth-tab">Sign Up</button>
+      </div>
+      <div id="auth-error" class="auth-error"></div>
+      <!-- Login Form -->
+      <form id="login-form" class="auth-form">
+        <input type="text" id="login-username" placeholder="Username" autocomplete="username" required>
+        <input type="password" id="login-password" placeholder="Password" autocomplete="current-password" required>
+        <button type="submit" class="auth-btn">Log In</button>
+      </form>
+      <!-- Signup Form -->
+      <form id="signup-form" class="auth-form" style="display:none;">
+        <input type="text" id="signup-username" placeholder="Username" autocomplete="username" required>
+        <input type="password" id="signup-password" placeholder="Password" autocomplete="new-password" required>
+        <button type="submit" class="auth-btn">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="site-content" class="hidden">
+    <div class="container">
+      <!-- Header: logo + search + cart + profile -->
+      <header class="header">
+        <div class="header-inner">
+          <div class="header-brand">
+            <img class="logo" src="logo.png" alt="Shophoria Logo">
+            <span class="brand-name">Shophoria</span>
+          </div>
+          <div class="header-actions">
+            <div class="nav-search">
+              <input type="text" placeholder="Search products..." class="search-input" id="search-input">
+              <button class="search-button" id="search-btn"><i class="fa fa-search"></i></button>
+            </div>
+            <div class="nav-cart" id="cart-btn">
+              <i class="fas fa-shopping-cart"></i>
+              <span class="cart-count" id="cart-count">0</span>
+            </div>
+            <div class="nav-account" id="profile-menu" style="position:relative;">
+              <img src="https://ui-avatars.com/api/?name=U&background=fbb1b1&color=fff&rounded=true&size=32" alt="Profile" class="profile-icon" id="profile-icon">
+              <div id="profile-dropdown" class="profile-dropdown hidden">
+                <a href="#" id="view-profile"><i class="fas fa-user"></i> My Profile</a>
+                <a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- NavBar: below header, pastel, contained -->
+        <nav class="navbar">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Categories</a></li>
+            <li><a href="#">New Arrivals</a></li>
+            <li><a href="#">Best Sellers</a></li>
+            <li><a href="#">Offers</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <section class="hero-section">
+          <div class="hero-content">
+            <h1>Shop Soft. Shop Pastel. Shop Shophoria.</h1>
+            <p>Discover trending fashion, electronics, home essentials & more. Fast delivery. Secure checkout.</p>
+            <a href="#shop-by-category" class="hero-btn" id="shop-now-btn">Shop Now</a>
+          </div>
+        </section>
+        <section class="shop-section" id="shop-by-category">
+  <div class="section-title">
+    <h2>Shop by Category</h2>
+  </div>
+  <div class="category-cards-grid">
+    <div class="category-card" style="background-image:url('https://images.unsplash.com/photo-1512436991641-6745cdb1723f?auto=format&fit=crop&w=600&q=80');">
+      <div class="category-overlay">
+        <div class="category-title">Fashion</div>
+        <a href="#" class="category-btn">Shop Now</a>
+      </div>
+    </div>
+    <div class="category-card" style="background-image:url('electronics.png');">
+      <div class="category-overlay">
+        <div class="category-title">Electronics</div>
+        <a href="#" class="category-btn">Shop Now</a>
+      </div>
+    </div>
+    <div class="category-card" style="background-image:url('house.jpg');">
+      <div class="category-overlay">
+        <div class="category-title">Home</div>
+        <a href="#" class="category-btn">Shop Now</a>
+      </div>
+    </div>
+    <div class="category-card" style="background-image:url('beauty.png');">
+      <div class="category-overlay">
+        <div class="category-title">Beauty</div>
+        <a href="#" class="category-btn">Shop Now</a>
+      </div>
+    </div>
+    <div class="category-card" style="background-image:url('toys.png');">
+      <div class="category-overlay">
+        <div class="category-title">Toys</div>
+        <a href="#" class="category-btn">Shop Now</a>
+      </div>
+    </div>
+    <div class="category-card" style="background-image:url('sports.png');">
+      <div class="category-overlay">
+        <div class="category-title">Sports</div>
+        <a href="#" class="category-btn">Shop Now</a>
+      </div>
+    </div>
+    <div class="category-card" style="background-image:url('books.png');">
+      <div class="category-overlay">
+        <div class="category-title">Books</div>
+        <a href="#" class="category-btn">Shop Now</a>
+      </div>
+    </div>
+    <div class="category-card" style="background-image:url('https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80');">
+      <div class="category-overlay">
+        <div class="category-title">Travel</div>
+        <a href="#" class="category-btn">Shop Now</a>
+      </div>
+    </div>
+    <div class="category-card" style="background-image:url('kids.jpg');">
+      <div class="category-overlay">
+        <div class="category-title">Kids</div>
+        <a href="#" class="category-btn">Shop Now</a>
+      </div>
+    </div>
+    <div class="category-card" style="background-image:url('grocery.jpg');">
+      <div class="category-overlay">
+        <div class="category-title">Groceries</div>
+        <a href="#" class="category-btn">Shop Now</a>
+      </div>
+    </div>
+  </div>
+        </section>
+
+        <section class="featured-products">
+          <div class="section-title">
+            <h2>Featured Products</h2>
+          </div>
+          <div class="product-grid" id="product-grid">
+            <!-- Products loaded by JS -->
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="footer-content">
+          <div class="footer-col">
+            <h4>About</h4>
+            <ul>
+              <li><a href="#">Our Story</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Press</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Customer Care</h4>
+            <ul>
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Help Center</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Returns</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Policies</h4>
+            <ul>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Accessibility</a></li>
+            </ul>
+          </div>
+          <div class="footer-col">
+            <h4>Follow Us</h4>
+            <div class="footer-social">
+              <a href="#"><i class="fab fa-facebook-f"></i></a>
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <span>created with love <span style="color:#e25555;">&#10084;&#65039;</span> by <b>SHOPHORIA</b></span>
+        </div>
+      </footer>
+      <div id="cart-modal" class="modal">
+        <div class="modal-content">
+          <span id="close-cart-modal" class="close">&times;</span>
+          <h2>Your Cart</h2>
+          <div id="cart-items"></div>
+          <div id="cart-total"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="shophoria.js"></script>
+</body>
+</html>
