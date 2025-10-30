@@ -159,18 +159,18 @@ body {
   padding: 8em 0 2.5em 0;
   text-align: center;
   background: url('bg.png') no-repeat ;
-  background-size:1500px 538px;
+  background-size:1200px 635px;
 }
 .hero-content h1 {
   font-family: 'Montserrat', sans-serif;
   color: #7face7;
   font-size: 2.5em;
-  margin-bottom: 0.3em;
+  margin-bottom: 1.5em;
 }
 .hero-content p {
   color: #0a0a0a;
   font-size: 1.2em;
-  margin-bottom: 1.4em;
+  margin-bottom: 1.9em;
 }
 .hero-btn {
   background: #82b0ec;
@@ -643,5 +643,6 @@ body {
 @media (max-width: 600px) {
   .auth-modal-content { min-width: 90vw; }
 }
+
 
 
